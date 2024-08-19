@@ -7,5 +7,7 @@ categories: [other]
 ---
 this page is only possible thanks to @laurapigeon on discord she practically made it for me lol i\'m a fraud btw
 
+the last bit isn\'t true its a reference
+
 \<< go back
-{: data-url="/index"}
+{: data-url="/"}
