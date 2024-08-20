@@ -9,7 +9,6 @@
 html {
     overflow: scroll;
     background: rgb(20, 20, 20);
-    cursor: url("/resources/images/cursor/hand1.ico"), auto;
 }
 
 body {
@@ -20,7 +19,6 @@ body {
     color: rgb(235, 228, 221);
     filter: url(#crispify);
     user-select: none;
-    cursor: url("/resources/images/cursor/hand1.ico"), auto;
 }
 
 .scalercontainer {
@@ -35,7 +33,6 @@ body {
     transform: scale(4);
     transform-origin: top left;
     box-sizing: border-box;
-    cursor: url("/resources/images/cursor/hand1.ico"), auto;
 }
 /* #endregion */
 

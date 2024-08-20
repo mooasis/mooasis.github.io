@@ -1,13 +1,24 @@
 ---
 layout: content
-title: congrattation
+title: Not Home
 background_image: purplegrip.png
 list_page: true
 categories: [other]
 ---
-this page is only possible thanks to @laurapigeon on discord she practically made it for me lol i\'m a fraud btw
+<p class="image positionbox" style="--top: 4px; --right: 3px;" data-url="https://laurapigeon.github.io/">
+    <img src="/resources/images/Pigeon.png">
+</p>
 
-the last bit isn\'t true its a reference
+this page is only possible thanks to 
+ @laurapigeon on discord teaching me 
+ everything
+
+click the pigeon to visit her website:
+{: style="--color: rgb(164, 164, 255);"}
+<br/>
 
 \<< go back
-{: data-url="/"}
+{: data-url="/" style="--color: rgb(255, 255, 5);"}
+
+    
+   
