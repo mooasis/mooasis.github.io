@@ -5,7 +5,7 @@ background_image: purplegrip.png
 list_page: true
 categories: [other]
 ---
-<p class="image positionbox" style="--top: 4px; --right: 3px;" data-url="https://laurapigeon.github.io/">
+<p class="free image" style="--top: 4px; --right: 3px;" data-url="https://laurapigeon.github.io/">
     <img src="/resources/images/Pigeon.png">
 </p>
 
@@ -18,7 +18,7 @@ click the pigeon to visit her website:
 <br/>
 
 \<< go back
-{: data-url="/" style="--color: rgb(255, 255, 5);"}
+{: data-url="javascript:history.back()" style="--color: rgb(255, 255, 5);"}
 
     
    

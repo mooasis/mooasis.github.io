@@ -22,14 +22,14 @@ gay
 
 gay
 
-<p class="image" style="--left: -7px; ">
+<p class="image shift" style="--left: -7px; ">
     <img src="/resources/images/polyamory1.png">
 </p>
 
-<p class="image" style="--left: -7px; ">
+<p class="image shift" style="--left: -7px; ">
     <img src="/resources/images/lesbian.png">
 </p>
 
-<p class="image" style="--left: -7px; ">
+<p class="image shift" style="--left: -7px; ">
     <img src="/resources/images/trans.png">
 </p>

@@ -114,7 +114,7 @@ body {
     padding: 0px 7px 0px 7px;
 }
 
-.positionbox {
+.free {
     position: absolute !important;
     top: var(--top);
     left: var(--left);
@@ -122,18 +122,22 @@ body {
     right: var(--right);
 }
 
-p {
+.shift {
     position: relative;
+    top: var(--top);
+    left: var(--left);
+    bottom: var(--bottom);
+    right: var(--right);
+}
+
+p {
+    position: relative; 
     width: var(--width, 0px);
     box-sizing: content-box;
     padding-left: var(--padding-left);
     text-align: var(--text-align, left);
     font-family: var(--font-family, pixel0);
     font-size: var(--font-size);
-    top: var(--top);
-    left: var(--left);
-    bottom: var(--bottom);
-    right: var(--right);
 }
 
 .linebox {
@@ -151,10 +155,6 @@ p {
     width: var(--width, min-content);
     image-rendering: pixelated;
     line-height: 0px;
-    top: var(--top);
-    left: var(--left);
-    bottom: var(--bottom);
-    right: var(--right);
 }
 
 img {
