@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>{{ page.title }}</title>
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="icon" type="image/png" href="/resources/images/favicon.ico" />
         <script src="/scripts/add-media-link.js" type=module></script>
@@ -11,17 +11,8 @@
         <script src="/scripts/preload-images.js" type=module></script>
         <style>
             .content {
-                background-image: url('/resources/images/backgrounds/purplegrip.png');
-                background-position: ;
-
-                
-                background-color: #36393e;
-                
-            }
-            p {
-                
-                color: var(--color, rgb(235, 228, 221));
-                
+                background-image: url('/resources/images/backgrounds/{{ page.background_image }}');
+                background-position: {{ page.background_position }};
             }
         </style>
     </head>
@@ -37,7 +28,6 @@
         </svg>
         <div class="scalercontainer">
             <div class="scaler">
-                
                 <div class="status">
                     <div class="statusbackground"></div>
                     <div class="statusname">
@@ -51,32 +41,8 @@
                         join a polycule today! <br/>thats what theyre called right
                     </div>
                 </div>
-                
                 <div class="content">
-                    <p class="image positionbox" style="--top: 0px; --left: 0px; ">
-    <img src="/resources/images/beefbrainshield.png" />
-</p>
-
-<p class="image positionbox" style="--top: 0px; --right: 0px; ">
-    <img src="/resources/images/beefbrainshield.png" />
-</p>
-
-<div style="--left: 45px; --top: 0px;">
-  <p>my name is maddie and lyn and anything else</p>
-
-  <p>my pronouns are she and her and nothing else</p>
-
-  <p data-url="/credit">credit &gt;&gt;</p>
-</div>
-
-<p class="image positionbox" style="--left: 82px; --top: 100px;">
-    <img src="/resources/images/beefbrainshieldbadge.png" />
-</p>
-
-<div class="positionbox" style="--left: 52px; --bottom: 0px; --width: 196px; --text-align: center;">
-  <p data-url="/">oops</p>
-</div>
-
+                    {{ content }}
                 </div>
             </div>
         </div>

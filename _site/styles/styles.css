@@ -16,7 +16,6 @@ body {
     font-family: 'pixel0';
     font-size: 7px;
     line-height: 8px;
-    color: rgb(235, 228, 221);
     filter: url(#crispify);
     user-select: none;
 }
@@ -62,6 +61,7 @@ body {
     position: absolute;
     top: 6px;
     left: 6px;
+    color: rgb(235, 228, 221);
 }
 
 .statusupdate {
@@ -97,6 +97,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: rgb(235, 228, 221);
 }
 /* #endregion */
 
@@ -104,7 +105,6 @@ body {
     position: relative;
     box-sizing: border-box;
     width: 300px;
-    background-color: #36393e;
     background-repeat: repeat;
     background-size: auto;
     background-clip: padding-box;
@@ -126,9 +126,14 @@ p {
     position: relative;
     width: var(--width, 0px);
     box-sizing: content-box;
+    padding-left: var(--padding-left);
     text-align: var(--text-align, left);
     font-family: var(--font-family, pixel0);
-    color: var(--color, rgb(235, 228, 221));
+    font-size: var(--font-size);
+    top: var(--top);
+    left: var(--left);
+    bottom: var(--bottom);
+    right: var(--right);
 }
 
 .linebox {
@@ -146,6 +151,10 @@ p {
     width: var(--width, min-content);
     image-rendering: pixelated;
     line-height: 0px;
+    top: var(--top);
+    left: var(--left);
+    bottom: var(--bottom);
+    right: var(--right);
 }
 
 img {
@@ -156,7 +165,9 @@ img {
 
 /* #region links */
 .image[data-url]:hover,
-p[data-url]:hover 
+p[data-url]:hover {
+    cursor: pointer;
+}
 
 .image[data-url]:hover .border,
 p[data-url]:hover .border {
