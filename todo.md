@@ -1,19 +1,15 @@
 ---
 layout: content
-title: Help
+title: To-Do
 background_image: purplegrip.png
 list_page: true
 categories: [other]
 ---
 
-fuckin do your shit bitch
+\- pronouns \>>
+{: data-url="/about"} 
 
-\- PRONOUNS. NOW
-{: data-url="/identity"} 
+\- autism
 
-\- idk what else yet
-
-\- oh yeah autism
-
-\- ???
-{: data-url="/archive"}
+\- ??? \>>
+{: data-url="/404"}

@@ -1,4 +1,5 @@
 ---
+permalink: /404
 layout: content
 title: Archive
 background_color: rgba(0,0,0,0)
@@ -14,7 +15,7 @@ ERROR 0XPE-NF
 This page cannot be found.
 
 \<< Go Back
-{: data-url="javascript:history.back()" class="shift" style="--color: rgb(255, 255, 5); --width: 300px; --left: -8px; --padding-left: 8px;" }
+{: data-url="javascript:history.back()" class="shift" style="--width: 300px; --left: -8px; --padding-left: 8px; --color: rgb(255, 255, 5); "}
 
 \<< Go to your assigned zones
-{: data-url="/" class="shift" style="--color: rgb(171, 171, 169); --width: 300px; --left: -8px; --padding-left: 14px;" }
+{: data-url="/" class="shift" style="--width: 300px; --left: -8px; --padding-left: 14px; --color: rgb(171, 171, 169); "}

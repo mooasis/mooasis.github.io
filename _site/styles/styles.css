@@ -21,11 +21,10 @@
 }
 
 .shift {
-    position: relative;
-    top: var(--top);
-    left: var(--left);
-    bottom: var(--bottom);
-    right: var(--right);
+    margin-top: var(--top, 7px);
+    margin-left: var(--left, 0px);
+    margin-bottom: var(--bottom, 7px);
+    margin-right: var(--right, 0px);
 }
 
 .center {

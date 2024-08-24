@@ -29,14 +29,17 @@
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="/styles/windowframe.css">
         <style>
-            #content {
+           #content {
+                {% if page.background_image and page.background_image != "" and page.background_image != nil %}
                 background-image: url('/resources/images/backgrounds/{{ page.background_image }}');
                 background-position: {{ page.background_position }};
-
+                background-color: rgba(0,0,0,0);
+                {% else %}
                 {% if page.background_color and page.background_color != "" and page.background_color != nil %}
                 background-color: {{ page.background_color }};
                 {% else %}
                 background-color: {{ site.background_color }};
+                {% endif %}
                 {% endif %}
             }
 
@@ -78,12 +81,12 @@
                 <div id="status">
                     <img id="statusbackground" src="/resources/images/status.png">
                     <div id="statusname">
-                        MADELYN LASTNAME'S STATUS
+                        MADELYN O'S STATUS
                     </div>
                     <div id="statusupdate">
                         UPDATED [NULL]
                     </div>
-                    <img id="statusicon" src="/resources/images/emotes/grin.png">
+                    <img id="statusicon" src="/resources/images/emotes/tongue.png">
                     <div id="statustext">
                         join a polycule today! <br/> thats what theyre called right
                     </div>
@@ -129,7 +132,7 @@
                         HYPNOSPACE EXPLORER
                     </div>
                     <div class="wf" id="navigationbar">
-                        <a id="nbhome" href="https://www.google.com/" ondragstart="return false;" ondrop="return false;"></a>
+                        <a id="nbhome" href="/" ondragstart="return false;" ondrop="return false;"></a>
                         <dif id="nbtext">
                             {% assign pageSlug = page.url | split: "." | first | remove: "/" %}
                             {% if pageSlug == "" %}

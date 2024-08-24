@@ -1,7 +1,7 @@
 ---
 layout: content
 title: Knead It More
-background_image: breadbg.png
+background_image: fire3.png
 hide_status: true
 list_page: true
 categories: [other]
