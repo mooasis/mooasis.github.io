@@ -13,7 +13,7 @@ categories: [other]
     <img src="/resources/images/beefbrainshield.png">
 </p>
 
-<div class="free" markdown="1" style="--left: 52px; --top: 0px;">
+<div class="free" markdown="1" style="--left: 52px; --top: 0px; ">
 my name is maddie and lyn and anything else 
 
 my pronouns are she and her and nothing else 
@@ -22,10 +22,19 @@ credit \>>
 {: data-url="/credit"} 
 </div>
 
+<div class="free" markdown="1" style="--right: 52px; --top: 31px; ">
+PLEASE
+{: data-url="/todo"} 
+</div>
+
 <p class="free image" style="--left: 82px; --top: 100px; ">
     <img src="/resources/images/beefbrainshieldbadge.png">
 </p>
 
+<p class="free image" style="--right: 52px; --top: 180px; ">
+    <img src="/resources/images/bread.png">
+</p>
+{: data-url="/bread"} 
 
 
 <div class="free" markdown="1" style="--left: 52px; --bottom: 0px; --width: 196px; --text-align: center;">

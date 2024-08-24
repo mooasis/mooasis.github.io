@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <title>Home</title>
-        <link rel="stylesheet" href="/styles/styles.css">
-        <link rel="icon" type="image/png" href="/resources/images/favicon.ico" />
+        
+
+        
+        <link rel="icon" type="image/png" href="/resources/images/favicons/default.ico" />
+        
+
+        <script src="/scripts/add-clickables.js" type=module></script>
         <script src="/scripts/add-media-link.js" type=module></script>
+        <!-- add media link before add link border !! -->
         <script src="/scripts/add-link-border.js" type=module></script>
         <script src="/scripts/centre-align-shift.js" type=module></script>
         <script src="/scripts/get-content-height.js" type=module></script>
         <script src="/scripts/preload-images.js" type=module></script>
+        <script src="/scripts/remove-half-pixels.js" type=module></script>
+        <script src="/scripts/set-scrollbar-pos.js" type=module></script>
+        <link rel="stylesheet" href="/styles/fonts.css">
+        <link rel="stylesheet" href="/styles/links.css">
+        <link rel="stylesheet" href="/styles/status.css">
+        <link rel="stylesheet" href="/styles/structure.css">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="/styles/windowframe.css">
         <style>
-            .content {
+            #content {
                 background-image: url('/resources/images/backgrounds/purplegrip.png');
                 background-position: ;
 
                 
-                background-color: #36393e;
+                background-color: rgb(54, 59, 62);
                 
             }
+
             p {
                 
                 color: var(--color, rgb(235, 228, 221));
+                
+
+                
+                font-family: var(--font, basic);
+                
+
+                
+                font-size: var(--font-size, 7px);
                 
             }
         </style>
@@ -28,6 +52,7 @@
     <body>
         <svg class="offscreen" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
             <defs>
+                <!--this is used to remove antialiasing for the upscale-->
                 <filter id="crispify">
                     <feComponentTransfer>
                         <feFuncA type="discrete" tableValues="0 1"/>
@@ -35,24 +60,24 @@
                 </filter>
             </defs>
         </svg>
-        <div class="scalercontainer">
-            <div class="scaler">
+        <div id="scalercontainer">
+            <div id="scaler">
                 
-                <div class="status">
-                    <div class="statusbackground"></div>
-                    <div class="statusname">
-                        MOOASIS'S STATUS
+                <div id="status">
+                    <img id="statusbackground" src="/resources/images/status.png">
+                    <div id="statusname">
+                        MADELYN LASTNAME'S STATUS
                     </div>
-                    <div class="statusupdate">
+                    <div id="statusupdate">
                         UPDATED [NULL]
                     </div>
-                    <div class="statusicon"></div>
-                    <div class="statustext">
-                        join a polycule today! <br/>thats what theyre called right
+                    <img id="statusicon" src="/resources/images/emotes/grin.png">
+                    <div id="statustext">
+                        join a polycule today! <br/> thats what theyre called right
                     </div>
                 </div>
                 
-                <div class="content">
+                <div id="content">
                     <p class="free image" style="--top: 0px; --left: 0px; ">
     <img src="/resources/images/beefbrainshield.png" />
 </p>
@@ -61,7 +86,7 @@
     <img src="/resources/images/beefbrainshield.png" />
 </p>
 
-<div class="free" style="--left: 52px; --top: 0px;">
+<div class="free" style="--left: 52px; --top: 0px; ">
   <p>my name is maddie and lyn and anything else</p>
 
   <p>my pronouns are she and her and nothing else</p>
@@ -69,8 +94,16 @@
   <p data-url="/credit">credit &gt;&gt;</p>
 </div>
 
+<div class="free" style="--right: 52px; --top: 31px; ">
+  <p data-url="/todo">PLEASE</p>
+</div>
+
 <p class="free image" style="--left: 82px; --top: 100px; ">
     <img src="/resources/images/beefbrainshieldbadge.png" />
+</p>
+
+<p class="free image" style="--right: 52px; --top: 180px; " data-url="/bread">
+    <img src="/resources/images/bread.png" />
 </p>
 
 <div class="free" style="--left: 52px; --bottom: 0px; --width: 196px; --text-align: center;">
@@ -78,6 +111,70 @@
 </div>
 
                 </div>
+            </div>
+        </div>
+        <div id="windowframe">
+            <div class="wf" id="explorerbarpanel">
+                <img id="ebleft" src="/resources/images/frame/ebleft.png">
+                <img id="ebbody" src="/resources/images/frame/ebbody.png">
+                <img id="ebright" src="/resources/images/frame/ebright.png">
+            </div>
+            <div class="wf" id="explorerbar">
+                <a class="eb" id="ebback" href="javascript:history.back()" ondragstart="return false;" ondrop="return false;"></a>
+                <a class="eb" id="ebforward" href="javascript:history.forward()" ondragstart="return false;" ondrop="return false;"></a>
+                <div id="ebpage">
+                    Home
+                </div>
+                <div id="ebuser">
+                    mooasis
+                </div>
+                <a class="eb" id="ebsearch" ondragstart="return false;" ondrop="return false;"></a>
+                <a id="ebinfo" href="javascript:window.location.href=window.location.hre" ondragstart="return false;" ondrop="return false;"></a>
+                <!-- replace above link later -->
+            </div>
+            <div>
+                <img class="wf" id="wfbottom" src="/resources/images/frame/bottom.png">
+                <img class="wf" id="wfleft" src="/resources/images/frame/left.png">
+                <img class="wf" id="wfright" src="/resources/images/frame/right.png">
+                <img class="wf" id="wfbottomleft" src="/resources/images/frame/bottomleft.png">
+                <img class="wf" id="wfbottomright" src="/resources/images/frame/bottomright.png">
+            </div>
+            <div class="wf" id="titlebar">
+                <div id="tbleft">
+                    <div class="wf" id="tbglobe"></div>
+                </div>
+                <div id="tbbody">
+                    <div class="wf" id="tbtitle">
+                        HYPNOSPACE EXPLORER
+                    </div>
+                    <div class="wf" id="navigationbar">
+                        <a id="nbhome" href="https://www.google.com/" ondragstart="return false;" ondrop="return false;"></a>
+                        <dif id="nbtext">
+                            
+                            
+                            <a class="nb" href="https://www.google.com/">
+                                >>
+                            </a>
+                            <a class="nb" href="/">
+                                UUHH UMM >>
+                            </a>
+                            <a class="nb" href="javascript:window.location.href=window.location.href">
+                                HOME
+                            </a>
+                        </dif>
+                        <a id="nbrefresh" href="javascript:window.location.href=window.location.href" ondragstart="return false;" ondrop="return false;"></a>
+                    </div>
+                </div>
+                <div id="tbright">
+                    <div class="wf" id="tbminimise"></div>
+                </div>
+            </div>
+            <div class="wf" id="scrollbar">
+                <div id="sbtop" ondragstart="return false;" ondrop="return false;"></div>
+                <div id="sbbody">
+                    <img class="wf" src="/resources/images/frame/scrollbar.png" id="sbbar" ondragstart="return false;" ondrop="return false;">
+                </div>
+                <div id="sbbottom" ondragstart="return false;" ondrop="return false;"></div>
             </div>
         </div>
     </body>
