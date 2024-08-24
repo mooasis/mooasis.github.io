@@ -6,7 +6,7 @@ list_page: true
 categories: [other]
 ---
 
-\- pronouns \>>
+\- aboutme \>>
 {: data-url="/about"} 
 
 \- autism

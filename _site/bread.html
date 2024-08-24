@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% if page.title and page.title != "" and page.title != nil %}
-        <title>{{ page.title }}</title>
-        {% else %}
-        <title>{{ site.title }}</title>
-        {% endif %}
+        
+        <title>Knead It More</title>
+        
 
-        {% if page.favicon and page.favicon != "" and page.favicon != nil %}
-        <link rel="icon" type="image/png" href="/resources/images/favicons/{{ page.favicon }}" />
-        {% else %}
-        <link rel="icon" type="image/png" href="/resources/images/favicons/{{ site.favicon }}" />
-        {% endif %}
+        
+        <link rel="icon" type="image/png" href="/resources/images/favicons/default.ico" />
+        
 
         <script src="/scripts/add-clickables.js" type=module></script>
         <script src="/scripts/add-media-link.js" type=module></script>
@@ -29,37 +25,25 @@
         <link rel="stylesheet" href="/styles/windowframe.css">
         <style>
             #content {
-                {% if page.background_image and page.background_image != "" and page.background_image != nil %}
-                background-image: url('/resources/images/backgrounds/{{ page.background_image }}');
-                background-position: {{ page.background_position }};
+                
+                background-image: url('/resources/images/backgrounds/fire3.png');
+                background-position: ;
                 background-color: rgba(0,0,0,0);
-                {% else %}
-                {% if page.background_color and page.background_color != "" and page.background_color != nil %}
-                background-color: {{ page.background_color }};
-                {% else %}
-                background-color: {{ site.background_color }};
-                {% endif %}
-                {% endif %}
+                
             }
 
             p {
-                {% if page.text_color and page.text_color != "" and page.text_color != nil %}
-                color: var(--color, {{ page.text_color }});
-                {% else %}
-                color: var(--color, {{ site.text_color }});
-                {% endif %}
+                
+                color: var(--color, rgb(235, 228, 221));
+                
 
-                {% if page.font and page.font != "" and page.font != nil %}
-                font-family: var(--font, {{ page.font }});
-                {% else %}
-                font-family: var(--font, {{ site.font }});
-                {% endif %}
+                
+                font-family: var(--font, basic);
+                
 
-                {% if page.font-size and page.font-size != "" and page.font-size != nil %}
-                font-size: var(--font-size, {{ page.font-size }});
-                {% else %}
-                font-size: var(--font-size, {{ site.font-size }});
-                {% endif %}
+                
+                font-size: var(--font-size, 7px);
+                
             }
         </style>
     </head>
@@ -76,28 +60,97 @@
         </svg>
         <div id="scalercontainer">
             <div id="scaler">
-                {% unless page.hide_status == true %}
-                <div id="status">
-                    <div id="statustitle">
-                        <div id="statusname">
-                            {{ site.real_name | upcase }}'S STATUS
-                        </div>
-                        <div id="statusupdate">
-                            UPDATED {{ site.status_updated }}
-                        </div>
-                    </div>
-                    <div id="statuscontent">
-                        <div id="statusemotebg">
-                            <img src="/resources/images/emotes/{{ site.status_emote }}">
-                        </div>
-                        <div id="statustext">
-                            {{ site.status_text }}
-                        </div>
-                    </div>
-                </div>
-                {% endunless %}
+                
                 <div id="content">
-                    {{ content }}
+                    <p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p data-url="https://www.youtube.com/watch?v=sYLWIbuqa0g">knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+<p>knead it more</p>
+
+
                 </div>
             </div>
         </div>
@@ -113,18 +166,16 @@
                     <div id="navigationbar">
                         <a id="nbhome" href="https://github.com/laurapigeon/laurapigeon.github.io" ondragstart="return false;" ondrop="return false;"></a>
                         <dif class="text" id="nbtext">
-                            {% assign pageSlug = page.url | split: "." | first | remove: "/" %}
-                            {% if pageSlug == "" %}
-                            {% assign pageSlug = site.index_name %}
-                            {% endif %}
+                            
+                            
                             <a class="nbtext" href="https://github.com/laurapigeon/laurapigeon.github.io">
                                 >>
                             </a>
                             <a class="nbtext" href="/">
-                                {{ site.zone_name | upcase }} >>
+                                OPEN EYED >>
                             </a>
                             <a class="nbtext" href="javascript:window.location.href=window.location.href">
-                                {{ pageSlug | upcase }}
+                                BREAD
                             </a>
                         </dif>
                         <a id="nbrefresh" href="javascript:window.location.href=window.location.href" ondragstart="return false;" ondrop="return false;"></a>
@@ -146,10 +197,10 @@
                         <a id="ebback" href="javascript:history.back()" ondragstart="return false;" ondrop="return false;"></a>
                         <a id="ebforward" href="javascript:history.forward()" ondragstart="return false;" ondrop="return false;"></a>
                         <div class="text" id="ebpage">
-                            {{ page.title }}
+                            Knead It More
                         </div>
                         <div class="text" id="ebuser">
-                            {{ site.user_name }}
+                            mooasis
                         </div>
                         <a id="ebsearch" ondragstart="return false;" ondrop="return false;"></a>
                         <a id="ebinfo" href="https://github.com/laurapigeon/laurapigeon.github.io" ondragstart="return false;" ondrop="return false;"></a>
