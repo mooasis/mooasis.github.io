@@ -24,6 +24,7 @@ body {
     position: relative;
     top: -8px;
     margin: 0 auto;
+    width: 1200px;
     filter: url(#crispify);
 }
 
@@ -33,5 +34,6 @@ body {
     padding: 32px 0px 5px 0px;
     box-sizing: border-box;
     transform: scale(4);
+    /* remove to show unscaled page */
     transform-origin: top left;
 }
