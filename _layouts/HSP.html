@@ -111,13 +111,13 @@
                         HYPNOSPACE EXPLORER
                     </div>
                     <div id="navigationbar">
-                        <a id="nbhome" href="https://github.com/mooasis/mooasis.github.io" ondragstart="return false;" ondrop="return false;"></a>
+                        <a id="nbhome" href="/" ondragstart="return false;" ondrop="return false;"></a>
                         <dif class="text" id="nbtext">
                             {% assign pageSlug = page.url | split: "." | first | remove: "/" %}
                             {% if pageSlug == "" %}
                             {% assign pageSlug = site.index_name %}
                             {% endif %}
-                            <a class="nbtext" href="https://github.com/mooasis/mooasis.github.io">
+                            <a class="nbtext" href="/">
                                 >>
                             </a>
                             <a class="nbtext" href="/">

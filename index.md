@@ -1,5 +1,5 @@
 ---
-layout: content
+layout: HSP
 title: Madelyn O's Home
 background_image: purplegrip.png
 list_page: true

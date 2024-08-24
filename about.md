@@ -1,5 +1,5 @@
 ---
-layout: content
+layout: HSP
 title: About Madelyn
 background_image: mflag3.png
 list_page: true

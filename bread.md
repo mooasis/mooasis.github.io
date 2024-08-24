@@ -1,6 +1,5 @@
 ---
-layout: content
-title: Knead It More
+layout: HSP
 background_image: fire3.png
 hide_status: true
 list_page: true

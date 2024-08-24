@@ -1,5 +1,5 @@
 ---
-layout: content
+layout: HSP
 title: To-Do
 background_image: purplegrip.png
 list_page: true

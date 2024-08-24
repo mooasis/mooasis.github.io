@@ -1,5 +1,5 @@
 ---
-layout: content
+layout: HSP
 title: Thanks
 background_image: cutcubesdark.png
 list_page: true

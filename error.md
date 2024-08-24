@@ -1,6 +1,6 @@
 ---
 permalink: /404
-layout: content
+layout: HSP
 title: Archive
 background_color: rgba(0,0,0,0)
 text_color: rgb(255,255,255)
