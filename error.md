@@ -1,7 +1,7 @@
 ---
 permalink: /404
 layout: HSP
-title: Archive
+title: ERROR 0XPE-NF
 background_color: rgba(0,0,0,0)
 text_color: rgb(255,255,255)
 hide_status: true
