@@ -3,13 +3,33 @@ const tempElement = document.createElement('span');
 tempElement.style.whiteSpace = 'nowrap';
 tempElement.style.visibility = 'hidden';
 
-// Get all paragraph elements
-var paragraphs = document.querySelectorAll('p');
+var content = document.getElementById('content');
+var paragraphs = content.querySelectorAll('p');
 
 // Loop through paragraphs replacing text contents with lineboxes
 paragraphs.forEach(paragraph => {
+    const textContent = paragraph.textContent;
+
+    var paragraphbox;
+    if (paragraph.hasAttribute("data-url")) {
+        paragraphbox = document.createElement('a');
+        paragraphbox.href = paragraph.getAttribute("data-url");
+        if (textContent.trim().length === 0) {
+            paragraphbox.classList.add("emptylink");
+        }
+    }
+    else {
+        if (textContent.trim().length === 0) {
+            return;
+        }
+        paragraphbox = document.createElement('div');
+    }
+    paragraphbox.classList.add('paragraphbox');
+    paragraphbox.textContent = textContent;
+    paragraph.appendChild(paragraphbox);
+
     //console.log(paragraph.textContent);
-    if (paragraph.textContent.trim().length === 0) {
+    if (textContent.trim().length === 0) {
         //console.log("see its going now bye");
         return;
     }
@@ -21,11 +41,11 @@ paragraphs.forEach(paragraph => {
     tempElement.style.fontFamily = computedStyle.fontFamily;
     tempElement.style.fontSize = computedStyle.fontSize;
     document.body.appendChild(tempElement)
-    
+
     const lines = [];
     let currentLine = '';
     if (computedStyle.width === '0px') {
-        tempElement.textContent = paragraph.textContent;
+        tempElement.textContent = textContent;
         var content = paragraph.closest('#content')
         var contentStyle = window.getComputedStyle(content)
         var contentWidth = content.clientWidth - parseFloat(contentStyle.paddingLeft) - parseFloat(contentStyle.paddingRight);
@@ -40,8 +60,8 @@ paragraphs.forEach(paragraph => {
     //console.log(paragraphWidth, computedStyle.width)
     
     // Split the text content into words
-    const words = paragraph.textContent.trim().split(' ');
-    
+    const words = textContent.trim().split(' ');
+
     // Initialize variables
     //console.log(paragraph.textContent)
     // Loop through each word
@@ -71,7 +91,7 @@ paragraphs.forEach(paragraph => {
             currentLine = testLine;
         }
     }
-    
+
     // Add the last line to the lines array
     lines.push(currentLine);
     
@@ -81,8 +101,7 @@ paragraphs.forEach(paragraph => {
         if (node.nodeType === Node.TEXT_NODE) {
             paragraph.removeChild(node);
         }
-    }
-    
+    } // this code removes the og text laura
     // Iterate through each line and perform operations
     lines.forEach((line, index) => {
         

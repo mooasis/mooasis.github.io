@@ -9,7 +9,7 @@ categories: [other]
 
 
 thank you laurapigeon for teaching me everything about hypnospace page creation
-{: class="shift" markdown="1" style="--width: 140px; --top: 20px; "}
+{: class="shift" markdown="1" style="--width: 138px; --top: 20px; "}
 
 click the pigeon to visit her page
 {: style="--color: rgb(164, 164, 255); "} 

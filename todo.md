@@ -11,5 +11,8 @@ categories: [other]
 
 \- autism
 
+\- more statuses >>
+{: data-url="/status"}
+
 \- ??? \>>
 {: data-url="/404"}
