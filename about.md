@@ -19,4 +19,4 @@ categories: [other]
 
 <p class="img shift" style="--left: -7px; --top: -14px; ">
     <img src="/resources/images/trans.png">
-</p>
+</p> 
