@@ -9,20 +9,24 @@
         <link rel="icon" type="image/png" href="/resources/images/favicons/default.ico" />
         
 
-        <script src="/scripts/add-clickables.js" type=module></script>
-        <script src="/scripts/add-media-link.js" type=module></script>
-        <!-- add media link before add link border !! -->
-        <script src="/scripts/add-link-border.js" type=module></script>
-        <script src="/scripts/centre-align-shift.js" type=module></script>
-        <script src="/scripts/get-content-height.js" type=module></script>
-        <script src="/scripts/remove-half-pixels.js" type=module></script>
-        <script src="/scripts/set-scrollbar-pos.js" type=module></script>
         <link rel="stylesheet" href="/styles/fonts.css">
         <link rel="stylesheet" href="/styles/links.css">
         <link rel="stylesheet" href="/styles/status.css">
         <link rel="stylesheet" href="/styles/structure.css">
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="/styles/windowframe.css">
+        <script src="/scripts/get-content-height.js" defer></script>
+        <!-- get content height before configuring scrollbar !! -->
+        <script src="/scripts/disable-buttons.js" defer></script>
+        <script src="/scripts/centre-align-shift.js" defer></script>
+        <script src="/scripts/add-media-link.js" defer></script>
+        <script src="/scripts/delay-load.js" defer></script>
+        <script src="/scripts/add-clickables.js" defer></script>
+        <!-- add media link before add link border !! -->
+        <script src="/scripts/add-link-border.js" defer></script>
+        <script src="/scripts/functions.js"></script>
+        <script src="/scripts/remove-half-pixels.js" defer></script>
+        <script src="/scripts/set-scrollbar-pos.js" defer></script>
         <style>
             #content {
                 
@@ -72,7 +76,9 @@
                     </div>
                     <div id="statuscontent">
                         <div id="statusemotebg">
+                            
                             <img src="/resources/images/emotes/tongue.png">
+                            
                         </div>
                         <div id="statustext">
                             join a polycule today! thats what theyre called right
@@ -122,21 +128,21 @@
                         HYPNOSPACE EXPLORER
                     </div>
                     <div id="navigationbar">
-                        <a id="nbhome" href="/" ondragstart="return false;" ondrop="return false;"></a>
+                        <a id="nbhome" href=/ ondragstart="return false;" ondrop="return false;"></a>
                         <dif class="text" id="nbtext">
                             
                             
-                            <a class="nbtext" href="/">
+                            <a class="text nbtext" href=/>
                                 >>
                             </a>
-                            <a class="nbtext" href="/">
+                            <a class="text nbtext" href="/">
                                 OPEN EYED >>
                             </a>
-                            <a class="nbtext" href="javascript:window.location.href=window.location.href">
+                            <a class="text nbtext" href="javascript:window.location.reload()">
                                 MADELYN O'S HOME
                             </a>
                         </dif>
-                        <a id="nbrefresh" href="javascript:window.location.href=window.location.href" ondragstart="return false;" ondrop="return false;"></a>
+                        <a id="nbrefresh" href="javascript:window.location.reload()" ondragstart="return false;" ondrop="return false;"></a>
                     </div>
                 </div>
                 <div id="tbright">
@@ -146,22 +152,29 @@
             <div id="wfbody">
                 <img id="wfleft" src="/resources/images/frame/wfleft.png">
                 <div id="explorerbar">
-                    <div id="explorerbarpanel">
+                    <div id="ebpanel">
                         <img id="ebleft" src="/resources/images/frame/ebleft.png">
                         <img id="ebbody" src="/resources/images/frame/ebbody.png">
                         <img id="ebright" src="/resources/images/frame/ebright.png">
                     </div>
-                    <div id="explorerbarcontents">
-                        <a id="ebback" href="javascript:history.back()" ondragstart="return false;" ondrop="return false;"></a>
-                        <a id="ebforward" href="javascript:history.forward()" ondragstart="return false;" ondrop="return false;"></a>
+                    <div id="ebcontents">
+                        <a id="ebback" href="javascript:historyBackWFallback()" ondragstart="return false;" ondrop="return false;"></a>
+                        <a id="ebforward" href="javascript:historyForwardWFallback()" ondragstart="return false;" ondrop="return false;"></a>
                         <div class="text" id="ebpage">
                             Madelyn O's Home
                         </div>
                         <div class="text" id="ebuser">
                             mooasis
                         </div>
+                        <form id="ebsearchbar" action="/pages" method="get">
+                            <img id="ebsbleft" src="/resources/images/frame/ebsbleft.png">
+                            <input type="text" name="search" autocomplete="off" class="text" id="ebsbbody">
+                            <input type="submit" value="" id="ebsbsearch" ondragstart="return false;" ondrop="return false;"></a>
+                        </form>
                         <a id="ebsearch" ondragstart="return false;" ondrop="return false;"></a>
-                        <a id="ebinfo" href="https://github.com/mooasis/mooasis.github.io" ondragstart="return false;" ondrop="return false;"></a>
+                        
+                        <a id="ebinfo" ondragstart="return false;" ondrop="return false;"></a>
+                        
                     </div>
                 </div>
                 <div id="scrollbar">

@@ -13,20 +13,24 @@
         <link rel="icon" type="image/png" href="/resources/images/favicons/{{ site.favicon }}" />
         {% endif %}
 
-        <script src="/scripts/add-clickables.js" type=module></script>
-        <script src="/scripts/add-media-link.js" type=module></script>
-        <!-- add media link before add link border !! -->
-        <script src="/scripts/add-link-border.js" type=module></script>
-        <script src="/scripts/centre-align-shift.js" type=module></script>
-        <script src="/scripts/get-content-height.js" type=module></script>
-        <script src="/scripts/remove-half-pixels.js" type=module></script>
-        <script src="/scripts/set-scrollbar-pos.js" type=module></script>
         <link rel="stylesheet" href="/styles/fonts.css">
         <link rel="stylesheet" href="/styles/links.css">
         <link rel="stylesheet" href="/styles/status.css">
         <link rel="stylesheet" href="/styles/structure.css">
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="/styles/windowframe.css">
+        <script src="/scripts/get-content-height.js" defer></script>
+        <!-- get content height before configuring scrollbar !! -->
+        <script src="/scripts/disable-buttons.js" defer></script>
+        <script src="/scripts/centre-align-shift.js" defer></script>
+        <script src="/scripts/add-media-link.js" defer></script>
+        <script src="/scripts/delay-load.js" defer></script>
+        <script src="/scripts/add-clickables.js" defer></script>
+        <!-- add media link before add link border !! -->
+        <script src="/scripts/add-link-border.js" defer></script>
+        <script src="/scripts/functions.js"></script>
+        <script src="/scripts/remove-half-pixels.js" defer></script>
+        <script src="/scripts/set-scrollbar-pos.js" defer></script>
         <style>
             #content {
                 {% if page.background_image and page.background_image != "" and page.background_image != nil %}
@@ -55,10 +59,10 @@
                 font-family: var(--font, {{ site.font }});
                 {% endif %}
 
-                {% if page.font-size and page.font-size != "" and page.font-size != nil %}
-                font-size: var(--font-size, {{ page.font-size }});
+                {% if page.font_size and page.font_size != "" and page.font_size != nil %}
+                font-size: var(--font-size, {{ page.font_size }});
                 {% else %}
-                font-size: var(--font-size, {{ site.font-size }});
+                font-size: var(--font-size, {{ site.font_size }});
                 {% endif %}
             }
         </style>
@@ -88,7 +92,9 @@
                     </div>
                     <div id="statuscontent">
                         <div id="statusemotebg">
+                            {% if site.status_emote and site.status_emote != "" and site.status_emote != nil %}
                             <img src="/resources/images/emotes/{{ site.status_emote }}">
+                            {% endif %}
                         </div>
                         <div id="statustext">
                             {{ site.status_text }}
@@ -111,23 +117,23 @@
                         HYPNOSPACE EXPLORER
                     </div>
                     <div id="navigationbar">
-                        <a id="nbhome" href="/" ondragstart="return false;" ondrop="return false;"></a>
+                        <a id="nbhome" href={{ site.home_url }} ondragstart="return false;" ondrop="return false;"></a>
                         <dif class="text" id="nbtext">
                             {% assign pageSlug = page.url | split: "." | first | remove: "/" %}
                             {% if pageSlug == "" %}
                             {% assign pageSlug = site.index_name %}
                             {% endif %}
-                            <a class="nbtext" href="/">
+                            <a class="text nbtext" href={{ site.home_url }}>
                                 >>
                             </a>
-                            <a class="nbtext" href="/">
+                            <a class="text nbtext" href="/">
                                 {{ site.zone_name | upcase }} >>
                             </a>
-                            <a class="nbtext" href="javascript:window.location.href=window.location.href">
+                            <a class="text nbtext" href="javascript:window.location.reload()">
                                 {{ pageSlug | upcase }}
                             </a>
                         </dif>
-                        <a id="nbrefresh" href="javascript:window.location.href=window.location.href" ondragstart="return false;" ondrop="return false;"></a>
+                        <a id="nbrefresh" href="javascript:window.location.reload()" ondragstart="return false;" ondrop="return false;"></a>
                     </div>
                 </div>
                 <div id="tbright">
@@ -137,22 +143,31 @@
             <div id="wfbody">
                 <img id="wfleft" src="/resources/images/frame/wfleft.png">
                 <div id="explorerbar">
-                    <div id="explorerbarpanel">
+                    <div id="ebpanel">
                         <img id="ebleft" src="/resources/images/frame/ebleft.png">
                         <img id="ebbody" src="/resources/images/frame/ebbody.png">
                         <img id="ebright" src="/resources/images/frame/ebright.png">
                     </div>
-                    <div id="explorerbarcontents">
-                        <a id="ebback" href="javascript:history.back()" ondragstart="return false;" ondrop="return false;"></a>
-                        <a id="ebforward" href="javascript:history.forward()" ondragstart="return false;" ondrop="return false;"></a>
+                    <div id="ebcontents">
+                        <a id="ebback" href="javascript:historyBackWFallback()" ondragstart="return false;" ondrop="return false;"></a>
+                        <a id="ebforward" href="javascript:historyForwardWFallback()" ondragstart="return false;" ondrop="return false;"></a>
                         <div class="text" id="ebpage">
                             {{ page.title }}
                         </div>
                         <div class="text" id="ebuser">
                             {{ site.user_name }}
                         </div>
+                        <form id="ebsearchbar" action="/pages" method="get">
+                            <img id="ebsbleft" src="/resources/images/frame/ebsbleft.png">
+                            <input type="text" name="search" autocomplete="off" class="text" id="ebsbbody">
+                            <input type="submit" value="" id="ebsbsearch" ondragstart="return false;" ondrop="return false;"></a>
+                        </form>
                         <a id="ebsearch" ondragstart="return false;" ondrop="return false;"></a>
-                        <a id="ebinfo" href="https://github.com/mooasis/mooasis.github.io" ondragstart="return false;" ondrop="return false;"></a>
+                        {% if site.info_url and site.info_url != "" and site.info_url != nil %}
+                        <a id="ebinfo" href={{ site.info_url }} ondragstart="return false;" ondrop="return false;"></a>
+                        {% else %}
+                        <a id="ebinfo" ondragstart="return false;" ondrop="return false;"></a>
+                        {% endif %}
                     </div>
                 </div>
                 <div id="scrollbar">
