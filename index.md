@@ -27,8 +27,12 @@ hrmm \>>
 {: data-url="/todo"} 
 </div>
 
-<p class="free img" style="--left: 82px; --top: 100px; ">
+<p class="free img center" style="--left: 82px; --top: 200px; ">
     <img src="/resources/images/beefbrainshieldbadge.png">
+</p>
+
+<p class="img shift" style="--left: 104px; --top: 20px;  ">
+    <img src="/resources/images/sadjellyfishturtle.png">
 </p>
 
 

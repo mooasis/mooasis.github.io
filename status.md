@@ -15,8 +15,14 @@ join a polycule today! thats what theyre called right
 
 THE GREEN ORANGE
 
+thats so juiced up
+
 they did surgery on a grape
 
 Update d my softwareviews. why am i so tiredif  i  m sleepppng now
+
+WE NEED CLUB COMMUNISM
+
+we'll just call it an alternative fact
 
 you just ate one of grandpa\'s famous buckets of garlic shrimp stew and your breath smells gnarlier than an unlabeled container in the back of the fridge!
